@@ -1,10 +1,19 @@
-const countries=document.querySelector(".countries-dropdown");
-const states=document.querySelector(".states-dropdown");
-const cities=document.querySelector(".cities-dropdown");
 window.addEventListener("load",()=>{
-    axios.get('https://d32sbion19muhj.cloudfront.net/pub/interview/countries').then(
+    axios.get('http://localhost:3844/').then(
         (response)=>{
-            console.log(response)
+            console.log(response.data)
+            for(let i=0;i<response.data.length;i++){
+                if(i==0){
+                    addToCountries(response.data[i].data)
+                    
+                }
+                else if(i==1){
+                    addToStates(response.data[i].data);
+                }
+                else{
+                   addToCities(response.data[i].data)
+                }
+            }
         }
     ).catch();
 })
