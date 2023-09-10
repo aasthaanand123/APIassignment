@@ -1,3 +1,58 @@
 .hide{
     display:none;
 }
+nav{
+    width: 100%;
+   display:flex;
+   justify-content: center;
+}
+body{
+    background-color: #385170;
+    min-height:100vh;
+}
+.drop-btn,.list-el{
+    background-color: #9fd3c7;
+    padding:15px;
+    border-radius: 10px;
+    width:20%;
+    font-size:1rem;
+    margin-bottom:10px;
+}
+a{
+    text-decoration: none;
+    color:#142d4c;
+    font-weight: 600;
+    text-align: center;
+}
+ul{
+    list-style-type: none;
+    
+}
+.lists{
+    display:flex;
+    width:80%;
+    margin-top:50px;
+    justify-content: space-evenly;
+    padding:0;
+} 
+.countries,.states,.cities{
+    display: flex;
+    flex-direction: column;
+    width:40%;
+    align-items: center;
+}
+.countrieslist,.stateslist,.citieslist{
+    display: flex;
+    flex-direction: column;
+align-items: center;
+    padding:0;
+}
+li{
+    text-align: center;
+}
+
+.list-el{
+    margin-top:2px;
+    margin-bottom:2px;
+    width:50%;
+}

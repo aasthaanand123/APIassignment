@@ -23,8 +23,8 @@ removehide(dropdown_button);
 function addToCountries(data){
     data.forEach(element=>{
         let newel=document.createElement("li");
-        newel.innerHTML=`<li><a href="" class="clickcountry country" id="${element.id}">${element.name}</a></li>`;
-        
+        newel.innerHTML=`<a href="" class="clickcountry country" id="${element.id}">${element.name}</a>`;
+        newel.classList.add("list-el")
         countries.appendChild(newel);
     })
     statesofcountry(document.querySelectorAll(".country"))
@@ -33,8 +33,8 @@ function addToCountries(data){
 function addToStates(data){
     data.forEach(element=>{
         let newel=document.createElement("li");
-        newel.innerHTML=`<li><a href="" class="clickstate state" id="${element.id}">${element.name}</a></li>`;
-        
+        newel.innerHTML=`<a href="" class="clickstate state" id="${element.id}">${element.name}</a>`;
+        newel.classList.add("list-el")
         states.appendChild(newel);
     })
     citiesofstates(document.querySelectorAll(".state"));
@@ -43,7 +43,8 @@ function addToStates(data){
 function addToCities(data){
     data.forEach(element=>{
         let newel=document.createElement("li");
-        newel.innerHTML=`<li><a href="" class="clickcity city el" id="${element.id}">${element.name}</a></li>`;
+        newel.innerHTML=`<a href="" class="clickcity city el" id="${element.id}">${element.name}</a>`;
+        newel.classList.add("list-el")
         cities.appendChild(newel);
     })
     removedefault(document.querySelectorAll(".clickcity"));
