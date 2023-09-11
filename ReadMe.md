@@ -1,4 +1,4 @@
-# API INTEGRATION WITH CLIENT SIDE
+# API INTEGRATION WITH CLIENT
 
 ### 1. Used server side proxy to overcome cors limitations for browser interaction
 
@@ -20,4 +20,30 @@
             });
         })`
 
-### 2.
+### 2. Modular code used
+
+    window.addEventListener("load",()=>{
+    axios.get('http://localhost:3844/').then(
+        (response)=>{
+            for(let i=0;i<response.data.length;i++){
+                if(i==0){
+                    countryarray=response.data[i].data;
+                    addToCountries(response.data[i].data)
+                    
+                }
+                else if(i==1){
+                    statearray=response.data[i].data;
+                    addToStates(response.data[i].data);
+                }
+                else{
+                    cityarray=response.data[i].data
+                   addToCities(response.data[i].data)
+                }
+            }
+        }
+        ).catch((err)=>{
+            console.log(err)
+        });
+    })
+
+### 3. No helping libraries used
